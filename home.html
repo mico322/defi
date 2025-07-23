@@ -128,7 +128,7 @@
 
   <div class="grid-view" id="gridView"></div>
   <script>
-    const slideCount = 29;
+    const slideCount = 10;
     const slideshow = document.getElementById("slideshow");
     const gridView = document.getElementById("gridView");
     const caption = document.getElementById("caption");
@@ -141,13 +141,13 @@
       const slideDiv = document.createElement("div");
       slideDiv.classList.add("slide");
       const img = document.createElement("img");
-      img.src = `${i}.png`;
+      img.src = `${i}.jpg`;
       img.alt = `${i}`;
       slideDiv.appendChild(img);
       slideshow.appendChild(slideDiv);
 
       const gridImg = document.createElement("img");
-      gridImg.src = `${i}.png`;
+      gridImg.src = `${i}.jpg`;
       gridImg.alt = `${i}`;
       gridImg.onclick = () => {
         toggleGrid(false);
@@ -174,10 +174,10 @@
     }
 
     downloadBtn.addEventListener("click", () => {
-      const imageUrl = `${slideIndex}.png`;
+      const imageUrl = `${slideIndex}.jpg`;
       const a = document.createElement("a");
       a.href = imageUrl;
-      a.download = `Typography-${slideIndex}.png`;
+      a.download = `Typography-${slideIndex}.jpg`;
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
